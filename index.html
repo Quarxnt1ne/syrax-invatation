@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syrax Invitation</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: url('https://i.postimg.cc/XJf56wY2/Find-Share-on-GIPHY.gif') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+        .invite-button {
+            background-color: purple;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .menu-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            border-radius: 5px;
+        }
+        .menu {
+            position: absolute;
+            top: 60px;
+            left: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 10px;
+            display: none;
+            flex-direction: column;
+            border-radius: 5px;
+        }
+        .menu a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            display: block;
+        }
+        .menu a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+    </style>
+    <script>
+        function toggleMenu() {
+            let menu = document.getElementById("menu");
+            menu.style.display = (menu.style.display === "block") ? "none" : "block";
+        }
+    </script>
+</head>
+<body>
+    <button class="menu-button" onclick="toggleMenu()">☰ Menu</button>
+    <div id="menu" class="menu">
+        <a href="about.html">About</a>
+        <a href="tos.html">Terms of Service</a>
+        <a href="privacy.html">Privacy Policy</a>
+    </div>
+    <div class="title">Syrax</div>
+    <button class="invite-button" onclick="window.location.href='https://discord.com/oauth2/authorize?client_id=1328638917393780776&permissions=8&integration_type=0&scope=bot+applications.commands'">Invite</button>
+</body>
+</html>
