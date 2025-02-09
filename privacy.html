@@ -5,40 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy</title>
     <style>
-       body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #121212;
-        color: #fff;
-        overflow-x: hidden; /* Prevent horizontal scroll */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-    }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #fff;
+            overflow-x: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px; /* เพิ่ม padding สำหรับอุปกรณ์เล็ก */
+        }
+
         .content-box {
             background: rgba(255, 255, 255, 0.1);
-            padding: 20px;
+            padding: 20px 30px;
             border-radius: 10px;
             width: 50%;
+            max-width: 700px; /* กำหนดความกว้างสูงสุด */
             text-align: left;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease; /* เพิ่มเอฟเฟกต์เมื่อ hover */
         }
+
+        .content-box:hover {
+            transform: scale(1.02); /* ขยายเล็กน้อยเมื่อ hover */
+        }
+
         h1, h2 {
             text-align: center;
         }
+
         .back-button {
             margin-top: 20px;
-            padding: 10px 20px;
-            background-color: white;
-            color: black;
+            padding: 12px 24px;
+            background-color: #1e90ff;
+            color: white;
             border: none;
             cursor: pointer;
             border-radius: 5px;
             display: block;
             margin-left: auto;
             margin-right: auto;
+            transition: background-color 0.3s ease, transform 0.2s ease; /* เอฟเฟกต์ hover */
+        }
+
+        .back-button:hover {
+            background-color: #63b3ed;
+            transform: scale(1.05);
+        }
+
+        ul {
+            padding-left: 20px; /* จัดระยะห่างรายการ */
+        }
+
+        @media (max-width: 768px) {
+            .content-box {
+                width: 90%; /* ปรับความกว้างสำหรับหน้าจอเล็ก */
+                padding: 15px 20px;
+            }
+
+            h1, h2 {
+                font-size: 1.5em; /* ปรับขนาดตัวอักษร */
+            }
         }
     </style>
 </head>
