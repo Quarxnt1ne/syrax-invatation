@@ -17,7 +17,7 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            padding: 20px; /* เพิ่ม padding สำหรับอุปกรณ์เล็ก */
+            padding: 20px;
         }
 
         .content-box {
@@ -25,56 +25,67 @@
             padding: 20px 30px;
             border-radius: 10px;
             width: 50%;
-            max-width: 700px; /* กำหนดความกว้างสูงสุด */
+            max-width: 700px;
             text-align: left;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-            transition: transform 0.3s ease; /* เพิ่มเอฟเฟกต์เมื่อ hover */
+            transition: transform 0.3s ease;
         }
 
         .content-box:hover {
-            transform: scale(1.02); /* ขยายเล็กน้อยเมื่อ hover */
+            transform: scale(1.02);
         }
 
         h1, h2 {
             text-align: center;
         }
 
-        .back-button {
-            margin-top: 20px;
-            padding: 12px 24px;
-            background-color: #1e90ff;
-            color: white;
-            border: none;
+        .hamburger {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30px;
+            height: 25px;
             cursor: pointer;
-            border-radius: 5px;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            transition: background-color 0.3s ease, transform 0.2s ease; /* เอฟเฟกต์ hover */
+            z-index: 1000;
         }
 
-        .back-button:hover {
+        .hamburger div {
+            background-color: white;
+            height: 4px;
+            border-radius: 2px;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        .hamburger:hover div {
             background-color: #63b3ed;
-            transform: scale(1.05);
         }
 
         ul {
-            padding-left: 20px; /* จัดระยะห่างรายการ */
+            padding-left: 20px;
         }
 
         @media (max-width: 768px) {
             .content-box {
-                width: 90%; /* ปรับความกว้างสำหรับหน้าจอเล็ก */
+                width: 90%;
                 padding: 15px 20px;
             }
 
             h1, h2 {
-                font-size: 1.5em; /* ปรับขนาดตัวอักษร */
+                font-size: 1.5em;
             }
         }
     </style>
 </head>
 <body>
+    <div class="hamburger" onclick="window.location.href='https://musicbot.syrax.space/'">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
     <div class="content-box">
         <h1>Privacy Policy</h1>
         <p><strong>Effective Date:</strong> 2025 February 10 </p>
@@ -102,8 +113,6 @@
 
         <h2>5. Changes to Privacy Policy</h2>
         <p>We may update this Privacy Policy at any time. Continued use of the Bot means you accept the updated policy.</p>
-
-        <button class="back-button" onclick="window.location.href='https://musicbot.syrax.space/'">Back to Home</button>
     </div>
 </body>
 </html>
